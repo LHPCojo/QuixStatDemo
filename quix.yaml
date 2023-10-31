@@ -21,6 +21,24 @@ deployments:
         description: Name of the output topic to write into
         required: true
         value: first_topic
+  - name: Image processing - Webcam input
+    application: Image processing - Webcam input
+    deploymentType: Service
+    version: 71cc5f50a0c2e9c4232acf63ea90afcf846e6f0c
+    resources:
+      cpu: 200
+      memory: 200
+      replicas: 1
+    publicAccess:
+      enabled: true
+      urlPrefix: webcam-ui
+    desiredStatus: Running
+    variables:
+      - name: webcam_output
+        inputType: OutputTopic
+        description: Output topic containing unprocessed images from webcam
+        required: true
+        value: image-base64
 
 # This section describes the Topics of the data pipeline
 topics:
