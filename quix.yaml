@@ -32,7 +32,7 @@ deployments:
     publicAccess:
       enabled: true
       urlPrefix: webcam-ui
-    desiredStatus: Running
+    desiredStatus: Stopped
     variables:
       - name: webcam_output
         inputType: OutputTopic
