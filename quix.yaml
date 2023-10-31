@@ -6,7 +6,7 @@ metadata:
 
 # This section describes the Deployments of the data pipeline
 deployments:
-  - name: Demo Data 2
+  - name: Demo Data
     application: Demo Data
     deploymentType: Service
     version: c90543e37a82e1967dfb5cda33cb2fce30b228a7
