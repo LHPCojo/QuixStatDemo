@@ -39,6 +39,36 @@ deployments:
         description: Output topic containing unprocessed images from webcam
         required: true
         value: image-base64
+  - name: CoinAPI
+    application: CoinAPI
+    deploymentType: Service
+    version: ba6737df5490803ea88379b9ae0f77a589d03c95
+    resources:
+      cpu: 200
+      memory: 200
+      replicas: 1
+    desiredStatus: Running
+    variables:
+      - name: output
+        inputType: OutputTopic
+        description: This is the output topic for coin data
+        required: true
+        value: coin-data
+      - name: coin_api_key
+        inputType: HiddenText
+        description: Your Coin API key
+        required: true
+        value: 9421CC64-B9D2-49D4-B075-0D4513374588
+      - name: primary_currency
+        inputType: FreeText
+        description: This is the main currency of interest
+        required: true
+        value: BTC
+      - name: secondary_currencies
+        inputType: FreeText
+        description: These are the currencies to compare the primary currency to
+        required: true
+        value: USD,GBP
 
 # This section describes the Topics of the data pipeline
 topics:
