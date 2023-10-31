@@ -206,7 +206,7 @@ def process_csv_file(csv_file):
 
 
 # Run the CSV processing in a thread
-processing_thread = threading.Thread(target=process_csv_file, args=('new-demo-data.csv',))
+processing_thread = threading.Thread(target=process_csv_file, args=('demo-data.csv',))
 processing_thread.start()
 
 
