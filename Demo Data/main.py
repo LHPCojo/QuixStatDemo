@@ -9,7 +9,7 @@ import threading
 
 # True = keep original timings
 # False = No delay, speed through it as fast as possible
-keep_timing = True
+keep_timing = False
 
 # If the process is terminated on the command line or by the container
 # setting this flag to True will tell the loops to stop and the code
@@ -114,7 +114,7 @@ def process_csv_file(csv_file):
     headers = df.columns.tolist()
 
     # Numer of times to repeat the data
-    iterations = 1
+    iterations = 10
 
     # Variables for calculating the % done
     update_pct = 1
@@ -204,7 +204,7 @@ def process_csv_file(csv_file):
 
 
 # Run the CSV processing in a thread
-processing_thread = threading.Thread(target=process_csv_file, args=('new-demo-data.csv',))
+processing_thread = threading.Thread(target=process_csv_file, args=('demo-data.csv',))
 processing_thread.start()
 
 
