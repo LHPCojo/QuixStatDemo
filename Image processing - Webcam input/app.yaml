@@ -1,0 +1,10 @@
+name: Image processing - Webcam input
+language: nodejs
+variables:
+  - name: webcam_output
+    inputType: OutputTopic
+    description: Output topic containing unprocessed images from webcam
+    defaultValue: image-base64
+    required: true
+dockerfile: src/build/dockerfile
+defaultFile: src/app/services/quix.service.ts
