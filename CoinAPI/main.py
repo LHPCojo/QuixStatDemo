@@ -58,7 +58,8 @@ try:
             # We sleep for 15 minutes so we don't reach free COIN API account limit.
             # Stop sleeping if process termination requested
             sleeping = 0
-            sleep_wake = 1
+            sleep_wake = 10
+            print("My interval is: " + sleep_wake);
             while sleeping <= sleep_wake and run:
                 sleeping = sleeping + 1
                 time.sleep(1)
