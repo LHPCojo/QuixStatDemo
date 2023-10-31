@@ -114,7 +114,7 @@ def process_csv_file(csv_file):
     headers = df.columns.tolist()
 
     # Numer of times to repeat the data
-    iterations = 10
+    iterations = 1
 
     # Variables for calculating the % done
     update_pct = 1
@@ -131,8 +131,6 @@ def process_csv_file(csv_file):
     # repeat the data to ensure the replay lasts long enough to
     # inspect and play with the data
     for iteration in range(0, iterations):
-
-        print("WHAT aM I DOING")
 
         # If shutdown has been requested, exit the loop.
         if shutting_down:
