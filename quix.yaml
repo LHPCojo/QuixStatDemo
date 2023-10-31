@@ -6,14 +6,15 @@ metadata:
 
 # This section describes the Deployments of the data pipeline
 deployments:
-  - name: Demo Data
+  - name: Demo Data 2
     application: Demo Data
-    deploymentType: Job
-    version: 94275382797c3bb450c742f89f5dff28362a3713
+    deploymentType: Service
+    version: c90543e37a82e1967dfb5cda33cb2fce30b228a7
     resources:
       cpu: 200
-      memory: 200
+      memory: 500
       replicas: 1
+    desiredStatus: Running
     variables:
       - name: Topic
         inputType: OutputTopic
