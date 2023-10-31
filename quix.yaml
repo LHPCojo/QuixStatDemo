@@ -9,7 +9,7 @@ deployments:
   - name: Demo Data 3
     application: Demo Data
     deploymentType: Service
-    version: 2e9d2b0995faa662dbd5a6c97735e4c69685910e
+    version: 226ccbfb2a55f124052076959dd74dc23a1f7e2e
     resources:
       cpu: 200
       memory: 500
