@@ -132,6 +132,8 @@ def process_csv_file(csv_file):
     # inspect and play with the data
     for iteration in range(0, iterations):
 
+        print("WHAT aM I DOING")
+
         # If shutdown has been requested, exit the loop.
         if shutting_down:
             break
