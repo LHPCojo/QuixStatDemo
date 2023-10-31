@@ -20,6 +20,21 @@ deployments:
         description: Name of the output topic to write into
         required: true
         value: first_topic
+  - name: Demo Data 2
+    application: Demo Data
+    deploymentType: Service
+    version: c90543e37a82e1967dfb5cda33cb2fce30b228a7
+    resources:
+      cpu: 200
+      memory: 500
+      replicas: 1
+    desiredStatus: Running
+    variables:
+      - name: Topic
+        inputType: OutputTopic
+        description: Name of the output topic to write into
+        required: true
+        value: first_topic
 
 # This section describes the Topics of the data pipeline
 topics:
