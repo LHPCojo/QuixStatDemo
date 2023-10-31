@@ -42,7 +42,7 @@ deployments:
   - name: CoinAPI
     application: CoinAPI
     deploymentType: Service
-    version: a921c74f45597a3ace06fc1166349a260f61fd54
+    version: 42e51147b099cd410656693541057fdf7d8c7c79
     resources:
       cpu: 200
       memory: 200
