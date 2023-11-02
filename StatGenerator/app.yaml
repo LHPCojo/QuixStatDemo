@@ -9,7 +9,7 @@ variables:
   - name: topics
     inputType: FreeText
     description: ''
-    defaultValue: '[     {         "topic_name":"some topic 1", 		"topic_minimum":1, 		"topic_maximum":100     },     {         "topic_name": "some topic 2" 		"topic_minimum":2, 		"topic_maximum":5      } ]'
+    defaultValue: '[     {         "topic_maximum": 100,         "topic_minimum": 1,         "topic_name": "some topic 1"     },     {         "topic_maximum": 5,         "topic_minimum": 2,         "topic_name": "some topic 2"     } ]'
     required: false
 dockerfile: build/dockerfile
 runEntryPoint: main.py
