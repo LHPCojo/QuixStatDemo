@@ -9,7 +9,7 @@ variables:
   - name: topics
     inputType: FreeText
     description: ''
-    defaultValue: '[     {         "topic_name": "some topic 1"     },     {         "topic_name": "some topic 2"     } ]'
+    defaultValue: '[]'
     required: false
 dockerfile: build/dockerfile
 runEntryPoint: main.py
