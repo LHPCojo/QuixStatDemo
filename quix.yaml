@@ -9,7 +9,7 @@ deployments:
   - name: StatGenerator
     application: StatGenerator
     deploymentType: Service
-    version: 9b81117de274322c8e6c75a90166f0515409d002
+    version: 607cffae6e6c3d54f6df35aada50563d8bc3d599
     resources:
       cpu: 200
       memory: 500
@@ -21,11 +21,11 @@ deployments:
         description: ''
         required: true
         value: generic-stat
-      - name: topic_name
+      - name: topics
         inputType: FreeText
         description: ''
         required: false
-        value: derpderp_topic
+        value: '[     {         "topic_name": "some topic 1"     },     {         "topic_name": "some topic 2"     } ]'
 
 # This section describes the Topics of the data pipeline
 topics:
