@@ -37,7 +37,7 @@ for index in range(0, totalGeneratorTime):
             .add_value(topic["topic_name"], random.randrange(topic["topic_minimum"], topic["topic_maximum"])) \
             .publish()
 
-    time.sleep(0.25)
+    time.sleep(0.50)
 
 print("Closing stream")
 stream.close()
