@@ -27,7 +27,8 @@ stream.properties.name = "StatGenerator Stream"
 # Add metadata about time series data you are about to send. 
 
 for topic in topics:
-    stream.timeseries.add_definition(topic["topic_name"]).set_range(-1.2, 1.2)
+    stream.timeseries.add_definition(topic["topic_name"])
+    # .set_range(-1.2, 1.2)
     stream.timeseries.buffer.time_span_in_milliseconds = 100
 
 
