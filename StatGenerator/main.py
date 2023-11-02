@@ -29,8 +29,6 @@ totalGeneratorTime = 30000;
 print("Sending values for " + str(totalGeneratorTime / 100) + " seconds.")
 
 for index in range(0, totalGeneratorTime):
-            # .add_value("ParameterA", math.sin(index / 200.0) + math.sin(index) / 5.0) \
-
     utc_now = datetime.datetime.utcnow()
     
     for topic in topics:
