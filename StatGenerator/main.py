@@ -33,7 +33,7 @@ for index in range(0, totalGeneratorTime):
 
     stream.timeseries.buffer.add_timestamp(datetime.datetime.utcnow())
     for topic in topics:
-        stream.add_value(topic["topic_name"], random.randrange(topic["topic_minimum"], topic["topic_maximum"])) \
+        stream.buffer.add_value(topic["topic_name"], random.randrange(topic["topic_minimum"], topic["topic_maximum"])) \
 
     stream.publish()
     time.sleep(0.25)
