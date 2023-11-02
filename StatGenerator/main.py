@@ -20,7 +20,8 @@ stream.properties.name = "StatGenerator Stream"
 stream.timeseries.add_definition("ParameterA").set_range(-1.2, 1.2)
 stream.timeseries.buffer.time_span_in_milliseconds = 100
 
-print("Sending values for 30 seconds.")
+totalGeneratorTime = 3000;
+print("Sending values for " + str(totalGeneratorTime / 1000) + " seconds.")
 
 for index in range(0, 3000):
             # .add_value("ParameterA", math.sin(index / 200.0) + math.sin(index) / 5.0) \
