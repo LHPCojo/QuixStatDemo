@@ -6,11 +6,6 @@ variables:
     description: ''
     defaultValue: generic-stat
     required: true
-  - name: topic_name
-    inputType: FreeText
-    description: ''
-    defaultValue: testtopic
-    required: false
   - name: topics
     inputType: FreeText
     description: ''
