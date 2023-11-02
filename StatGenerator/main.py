@@ -28,8 +28,8 @@ stream.properties.name = "StatGenerator Stream"
 
 for topic in topics:
     stream.timeseries.add_definition(topic["topic_name"]).set_range(-1.2, 1.2)
+    stream.timeseries.buffer.time_span_in_milliseconds = 100
 
-stream.timeseries.buffer.time_span_in_milliseconds = 100
 
 totalGeneratorTime = 30000;
 print("Sending values for " + str(totalGeneratorTime / 100) + " seconds.")
