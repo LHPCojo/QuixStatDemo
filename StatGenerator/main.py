@@ -11,12 +11,6 @@ client = qx.QuixStreamingClient()
 
 topics = json.loads(os.environ["topics"])
 
-# topics = os.environ["topics"]
-topic_names = []
-for topic in topics:
-    print(topic["topic_name"])
-
-
 # Open the output topic where to write data out
 topic_producer = client.get_topic_producer(topic_id_or_name = os.environ["output"])
 
