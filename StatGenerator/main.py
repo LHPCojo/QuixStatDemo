@@ -31,13 +31,12 @@ print("Sending values for " + str(totalGeneratorTime / 100) + " seconds.")
 for index in range(0, totalGeneratorTime):
             # .add_value("ParameterA", math.sin(index / 200.0) + math.sin(index) / 5.0) \
 
+    stream.timeseries.buffer.add_timestamp(datetime.datetime.utcnow())
     for topic in topics:
-        stream.timeseries \
-            .buffer \
-            .add_timestamp(datetime.datetime.utcnow()) \
-            .add_value(topic["topic_name"], random.randrange(topic["topic_minimum"], topic["topic_maximum"])) \
-            .publish()
-        time.sleep(0.25)
+        stream.add_value(topic["topic_name"], random.randrange(topic["topic_minimum"], topic["topic_maximum"])) \
+
+    stream.publish()
+    time.sleep(0.25)
 
 print("Closing stream")
 stream.close()
