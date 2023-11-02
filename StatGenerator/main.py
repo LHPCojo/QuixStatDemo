@@ -10,7 +10,7 @@ client = qx.QuixStreamingClient()
 topics = os.environ["topics"]
 topic_names = []
 for topic in topics:
-    print(topic)
+    print(str(topic))
 
 
 # # Open the output topic where to write data out
