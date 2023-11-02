@@ -3,7 +3,6 @@ import time
 import datetime
 import os
 import json
-import math
 import random
 
 # Quix injects credentials automatically to the client. 
