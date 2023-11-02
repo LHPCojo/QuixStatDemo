@@ -8,8 +8,7 @@ import json
 # Alternatively, you can always pass an SDK token manually as an argument.
 client = qx.QuixStreamingClient()
 
-with open("test.json", "r") as read_file:
-    topics = json.load(read_file)
+topics = json.loads(os.environ["topics"])
 
 # topics = os.environ["topics"]
 topic_names = []
