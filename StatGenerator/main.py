@@ -34,7 +34,7 @@ for index in range(0, totalGeneratorTime):
     for topic in topics:
         stream.timeseries.buffer \
             .add_timestamp(utc_now) \
-            .add_value(topic["topic_name"], random.randrange(topic["topic_minimum"], topic["topic_maximum"])) \
+            .add_value(topic["topic_name"], random.randrange(topic["topic_minimum"], topic["topic_maximum"]))
 
     stream.timeseries.publish()
     time.sleep(0.25)
