@@ -11,6 +11,11 @@ variables:
     description: ''
     defaultValue: testtopic
     required: false
+  - name: topics
+    inputType: FreeText
+    description: ''
+    defaultValue: '[]'
+    required: false
 dockerfile: build/dockerfile
 runEntryPoint: main.py
 defaultFile: main.py
