@@ -3,8 +3,8 @@ language: python
 variables:
   - name: output
     inputType: OutputTopic
-    description: This is the output topic for hello world data
-    defaultValue: hello-world-source
+    description: ''
+    defaultValue: generic-stat
     required: true
 dockerfile: build/dockerfile
 runEntryPoint: main.py
