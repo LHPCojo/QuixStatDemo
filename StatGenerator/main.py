@@ -23,10 +23,12 @@ stream.timeseries.buffer.time_span_in_milliseconds = 100
 print("Sending values for 30 seconds.")
 
 for index in range(0, 3000):
+            # .add_value("ParameterA", math.sin(index / 200.0) + math.sin(index) / 5.0) \
+
     stream.timeseries \
         .buffer \
+        .add_value("ParameterA", 1) \
         .add_timestamp(datetime.datetime.utcnow()) \
-        .add_value("ParameterA", math.sin(index / 200.0) + math.sin(index) / 5.0) \
         .publish()
     time.sleep(0.01)
 
