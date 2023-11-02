@@ -24,7 +24,10 @@ stream = topic_producer.create_stream()
 stream.properties.name = "StatGenerator Stream"
 
 # Add metadata about time series data you are about to send. 
-stream.timeseries.add_definition(topic_name).set_range(-1.2, 1.2)
+
+for topic in topics:
+    stream.timeseries.add_definition(topic["topic_name"]).set_range(-1.2, 1.2)
+
 stream.timeseries.buffer.time_span_in_milliseconds = 100
 
 totalGeneratorTime = 30000;
@@ -33,12 +36,13 @@ print("Sending values for " + str(totalGeneratorTime / 100) + " seconds.")
 for index in range(0, totalGeneratorTime):
             # .add_value("ParameterA", math.sin(index / 200.0) + math.sin(index) / 5.0) \
 
-    stream.timeseries \
-        .buffer \
-        .add_timestamp(datetime.datetime.utcnow()) \
-        .add_value(topic_name, 1) \
-        .publish()
-    time.sleep(0.01)
+    for topic in topics:
+        stream.timeseries \
+            .buffer \
+            .add_timestamp(datetime.datetime.utcnow()) \
+            .add_value(topic["topic_name"], math.sin(index / 200.0) + math.sin(index) / 5.0) \
+            .publish()
+        time.sleep(0.01)
 
 print("Closing stream")
 stream.close()
