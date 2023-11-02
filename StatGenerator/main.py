@@ -14,7 +14,7 @@ topic_producer = client.get_topic_producer(topic_id_or_name = os.environ["output
 
 # Set stream ID or leave parameters empty to get stream ID generated.
 stream = topic_producer.create_stream()
-stream.properties.name = "Hello World Python stream"
+stream.properties.name = "StatGenerator Stream"
 
 # Add metadata about time series data you are about to send. 
 stream.timeseries.add_definition("ParameterA").set_range(-1.2, 1.2)
