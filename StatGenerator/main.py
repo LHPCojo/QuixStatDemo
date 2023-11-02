@@ -23,7 +23,7 @@ stream.timeseries.buffer.time_span_in_milliseconds = 100
 totalGeneratorTime = 3000;
 print("Sending values for " + str(totalGeneratorTime / 100) + " seconds.")
 
-for index in range(0, 3000):
+for index in range(0, totalGeneratorTime):
             # .add_value("ParameterA", math.sin(index / 200.0) + math.sin(index) / 5.0) \
 
     stream.timeseries \
