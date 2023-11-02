@@ -28,8 +28,8 @@ for index in range(0, totalGeneratorTime):
 
     stream.timeseries \
         .buffer \
-        .add_value("ParameterA", 1) \
         .add_timestamp(datetime.datetime.utcnow()) \
+        .add_value("ParameterA", 1) \
         .publish()
     time.sleep(0.01)
 
