@@ -21,7 +21,7 @@ stream.properties.name = "StatGenerator Stream"
 stream.timeseries.add_definition(topic_name).set_range(-1.2, 1.2)
 stream.timeseries.buffer.time_span_in_milliseconds = 100
 
-totalGeneratorTime = 3000;
+totalGeneratorTime = 30000;
 print("Sending values for " + str(totalGeneratorTime / 100) + " seconds.")
 
 for index in range(0, totalGeneratorTime):
