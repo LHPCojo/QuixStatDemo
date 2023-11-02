@@ -9,7 +9,7 @@ deployments:
   - name: StatGenerator
     application: StatGenerator
     deploymentType: Service
-    version: 8fc29dd6a1bee12d66bd19ee8479b967cc65a6a1
+    version: 9b14fffcf11bc3122535f67485ed7ecfa25d653e
     resources:
       cpu: 200
       memory: 500
