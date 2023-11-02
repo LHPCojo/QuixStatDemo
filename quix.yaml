@@ -5,7 +5,27 @@ metadata:
   version: 1.0
 
 # This section describes the Deployments of the data pipeline
-deployments: []
+deployments:
+  - name: StatGenerator
+    application: StatGenerator
+    deploymentType: Service
+    version: ed63ea152c90e7b00d4868e3692ebe40a5d56dde
+    resources:
+      cpu: 200
+      memory: 500
+      replicas: 1
+    desiredStatus: Running
+    variables:
+      - name: output
+        inputType: OutputTopic
+        description: ''
+        required: true
+        value: generic-stat
+      - name: topic_name
+        inputType: FreeText
+        description: ''
+        required: false
+        value: testtopic
 
 # This section describes the Topics of the data pipeline
 topics:
