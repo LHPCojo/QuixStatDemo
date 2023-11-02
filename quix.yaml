@@ -6,24 +6,6 @@ metadata:
 
 # This section describes the Deployments of the data pipeline
 deployments:
-  - name: Image processing - Webcam input
-    application: Image processing - Webcam input
-    deploymentType: Service
-    version: 71cc5f50a0c2e9c4232acf63ea90afcf846e6f0c
-    resources:
-      cpu: 200
-      memory: 200
-      replicas: 1
-    publicAccess:
-      enabled: true
-      urlPrefix: webcam-ui
-    desiredStatus: Stopped
-    variables:
-      - name: webcam_output
-        inputType: OutputTopic
-        description: Output topic containing unprocessed images from webcam
-        required: true
-        value: image-base64
   - name: CoinAPI
     application: CoinAPI
     deploymentType: Service
