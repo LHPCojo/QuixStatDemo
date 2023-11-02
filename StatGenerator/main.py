@@ -37,7 +37,7 @@ for index in range(0, totalGeneratorTime):
             .add_timestamp(datetime.datetime.utcnow()) \
             .add_value(topic["topic_name"], random.randrange(topic["topic_minimum"], topic["topic_maximum"])) \
             .publish()
-        time.sleep(1)
+        time.sleep(0.5)
 
 print("Closing stream")
 stream.close()
