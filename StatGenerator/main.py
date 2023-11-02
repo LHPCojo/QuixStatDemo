@@ -2,13 +2,15 @@ import quixstreams as qx
 import time
 import datetime
 import os
-import json
 
 # Quix injects credentials automatically to the client. 
 # Alternatively, you can always pass an SDK token manually as an argument.
 client = qx.QuixStreamingClient()
 
 topics = os.environ["topics"]
+topic_names = []
+for topic in topics:
+    print(topic.topic_name)
 
 
 # Open the output topic where to write data out
