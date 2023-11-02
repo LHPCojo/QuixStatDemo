@@ -31,6 +31,8 @@ print("Sending values for " + str(totalGeneratorTime / 100) + " seconds.")
 for index in range(0, totalGeneratorTime):
     utc_now = datetime.datetime.utcnow()
     
+    stream.timeseries.buffer.add_timestamp(utc_now).add_value("label", "HELLO")
+
     for topic in topics:
         stream.timeseries.buffer \
             .add_timestamp(utc_now) \
