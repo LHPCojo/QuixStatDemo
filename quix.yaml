@@ -25,7 +25,7 @@ deployments:
         inputType: FreeText
         description: ''
         required: false
-        value: '[     {         "topic_maximum": 100,         "topic_minimum": 1,         "topic_name": "some topic 1"     },     {         "topic_maximum": 5,         "topic_minimum": 2,         "topic_name": "some topic 2"     },     {         "topic_maximum": 50,         "topic_minimum": 20,         "topic_name": "some topic 3"     } ]'
+        value: '[     {         "topic_maximum": 100,         "topic_minimum": 1,         "topic_name": "some topic 1"     },     {         "topic_maximum": 5,         "topic_minimum": 2,         "topic_name": "some topic 2"     },     {         "topic_maximum": 50,         "topic_minimum": 20,         "topic_name": "some topic 3"     }, 	{         "topic_maximum": 30,         "topic_minimum": 25,         "topic_name": "some topic 4"     } ]'
 
 # This section describes the Topics of the data pipeline
 topics:
